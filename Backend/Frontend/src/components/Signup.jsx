@@ -21,7 +21,7 @@ const from=location.state?.from?.pathname || "/"
         email:data.email,
         password:data.password,
       }
-     await axios.post("https://bookapp-ktia.onrender.com/user/signup",userInfo)
+     await axios.post("/user/signup",userInfo)
       .then((res)=>{
         console.log(res.data)
         if(res.data){
