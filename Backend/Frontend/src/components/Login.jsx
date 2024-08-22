@@ -20,8 +20,9 @@ const Login = () => {
       if(res.data){
         alert("login Successfully")
         document.getElementById("my_modal_3").close();
+         window.location.reload();  
         setTimeout(()=>{
-          window.location.reload();  
+         
         localStorage.setItem("Users",JSON.stringify(res.data.user));
         },1000);
       }
