@@ -10,7 +10,7 @@ const Freebook = () => {
   useEffect(()=>{
     const getBook=async()=>{
       try{
-        const res=await axios.get("https://bookapp-ktia.onrender.com/book");
+        const res=await axios.get("/book");
         console.log(res.data)
         const data=res.data.filter((data)=>data.category==="Free");
         setBook(res.data)
